@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="TopDownRPG/TopDownRPG.vcxproj" Id="36c6c983-6d8f-433d-9354-b5d887729604" />
+</Solution>
