@@ -108,10 +108,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);USE_LIBTYPE_SHARED</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);USE_LIBTYPE_SHARED;PRODUCTION_BUILD=0</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -130,16 +130,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);PRODUCTION_BUILD=1;USE_LIBTYPE_SHARED</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);raylib.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);raylibdll.lib;winmm.lib</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -152,7 +153,11 @@
     <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_tables.cpp" />
     <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_widgets.cpp" />
     <ClCompile Include="..\thirdparty\rlimgui\rlImGui.cpp" />
+    <ClCompile Include="gameLayer\gameMain.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gameLayer\gameMain.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

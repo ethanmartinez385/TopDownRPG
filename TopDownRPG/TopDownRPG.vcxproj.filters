@@ -36,5 +36,13 @@
     <ClCompile Include="..\thirdparty\rlimgui\rlImGui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gameLayer\gameMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gameLayer\gameMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
