@@ -111,8 +111,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);USE_LIBTYPE_SHARED</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +133,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +146,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui.cpp" />
+    <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_tables.cpp" />
+    <ClCompile Include="..\..\..\..\Users\ethan\Downloads\imgui-1.89.7-docking\imgui-1.89.7-docking\imgui_widgets.cpp" />
+    <ClCompile Include="..\thirdparty\rlimgui\rlImGui.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
