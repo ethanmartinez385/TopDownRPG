@@ -59,6 +59,7 @@ int main()
 
 	CloseWindow();
 
+	std::cout << "\n\nCLOSED!!!!!!!!!\n\n";
 	closeGame();
 
 #pragma region imgui

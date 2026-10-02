@@ -39,9 +39,15 @@
     <ClCompile Include="gameLayer\gameMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="platform\asserts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameLayer\gameMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="platform\asserts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -111,7 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);USE_LIBTYPE_SHARED;PRODUCTION_BUILD=0</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer;$(ProjectDir)platform</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -133,7 +133,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);PRODUCTION_BUILD=1;USE_LIBTYPE_SHARED</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\raylib-6.0_win64_msvc16\include;%(AdditionalIncludeDirectories);C:\Projects\MyRPG\TopDownRPG\thirdparty\imgui-docking\imgui;C:\Projects\MyRPG\TopDownRPG\thirdparty\rlimgui;$(ProjectDir)gameLayer;$(ProjectDir)platform</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,9 +155,11 @@
     <ClCompile Include="..\thirdparty\rlimgui\rlImGui.cpp" />
     <ClCompile Include="gameLayer\gameMain.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="platform\asserts.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameLayer\gameMain.h" />
+    <ClInclude Include="platform\asserts.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
